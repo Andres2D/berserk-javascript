@@ -38,3 +38,27 @@ String.prototype.renderRegularExpression = function(obj) {
 
 const template = 'Hello, my name is ${firstName}, age ${age}, I am a ${job.name}';
 console.log(`Regular expression => ${template.renderRegularExpression(employee)}`);
+
+
+/**
+ * eval approach
+ */
+ String.prototype.renderByEval = function(obj) {
+  const template = this;
+  eval(`var { ${Object.keys(obj).join(',')} } = obj`);
+  const renderStr = eval('`' + template + '`');
+  return renderStr;
+}
+
+console.log(`eval => ${template.renderByEval(employee)}`);
+
+/**
+ * With statement approach
+ */
+String.prototype.renderByWith = function(obj) {
+  with(obj){
+    return eval('`' + template + '`');
+  }
+}
+
+console.log(`With => ${template.renderByWith(employee)}`);
