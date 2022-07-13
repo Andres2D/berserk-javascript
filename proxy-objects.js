@@ -45,3 +45,26 @@ const userObjHandler = {
 
 const userObjProxy = new Proxy(userObj, userObjHandler);
 console.log(userObjProxy.id);
+
+// If we want to validate a set value before to update the object:
+
+const userObjTwo = {
+  id: 11,
+  userName: 'Andres2D',
+  status: 'loggedIn'
+};
+
+const userObjHandlerTwo = {
+  set: function(obj, prop, value) {
+    if(typeof value !== 'string'){
+      throw new Error('This value should be a string');
+    }else{
+      return obj[prop] = value;
+    }
+  }
+}
+
+const userObjProxyTwo = new Proxy(userObjTwo, userObjHandlerTwo);
+userObjProxyTwo.userName = 'Andres_2D';
+console.log(userObjProxyTwo);
+userObjProxyTwo.userName = 3;
