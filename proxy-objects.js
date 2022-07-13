@@ -7,7 +7,7 @@ const initialObj = {
 };
 
 const handler = {
-  get: function(obj, prop) {
+  get: function(obj, prop) { // ==> a custom operation it's called a trap
     console.log('This is a get operation');
     return obj[prop];
   },
@@ -22,3 +22,26 @@ console.log(customObjectProxy.description);
 console.log('---------');
 customObjectProxy.id = 11;
 console.log(customObjectProxy);
+console.log('=========================');
+// Real world implementation
+// We want to make private the property status of the object
+// if someone tries to get that value, we throw an error
+
+const userObj = {
+  id: 11,
+  userName: 'Andres2D',
+  status: 'loggedIn'
+};
+
+const userObjHandler = {
+  get: function(obj, prop) {
+    if(prop === 'status'){
+      throw new Error('401 Unauthorized to get access to this value');
+    }else{
+      return obj[prop];
+    }
+  }
+}
+
+const userObjProxy = new Proxy(userObj, userObjHandler);
+console.log(userObjProxy.id);
