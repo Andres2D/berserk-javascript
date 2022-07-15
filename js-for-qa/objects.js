@@ -1,10 +1,9 @@
 // Objects
 
-// basic object using literal notation, primero vacío
-// explicar propiedad -> valor
-// puede ser primitivo u otro object
-// podría agregar una función, contenedor de información
-// almacenar otro objecto u array
+// Creation of a basic object using literal object
+// with key value structure
+// the object can store any kind of data type, objects and primitives
+// we can add method to an object to store functionality
 
 // const student = {};
 // empty object
@@ -23,7 +22,7 @@
 //   },
 //   getFullName: function() { return this.firstName + this.surName },
 //   getFullNameOp2() {
-//     return this.firstName + this.surName; // interpolacion de strings
+//     return this.firstName + this.surName; // interpolation of strings
 //   }
 // };
 
@@ -54,7 +53,7 @@
   //   }
   // ],
 
-// // acceso a valores
+// // Accessing to values
 // const studentName = student.firstName;
 // const studentName2 = student['firstName'];
 
@@ -65,44 +64,42 @@
 // console.log(studentName2);
 // console.log(firstName);
 
-// acceso a valor no definidos
+// Accession to undefined values
 // const notDefined = student.password;
 // console.log(notDefined);
 
-// // Sobreescribir valores
+// // Overriding values
 // student.isGraduated = true;
 // console.log(student);
 
-// // agregar nuevas propiedades
+// // Add new properties to the object
 // student.grade = 0.5;
 // console.table(student);
 
-// // recorrer un objeto
+// // Go over the object information
 
-// explicar que es el object keys
-// devuelve un array y por esto se puede iterar posible iteracción
+// Object has multiples methods to get iterable data about the object
 // Object.keys(student);
 // Object.values(student);
 // Object.entries(student);
 
-// // por claves
+// // By keys
 // Object.keys(student).forEach((key) => { // o con map, for
 //   console.log(key);
 // });
 
-// // por valores
+// // By values
 // Object.values(student).forEach((val) => {
 //   console.log(val);
 // });
 
-// // por clave y valor
+// // By key and value
 // Object.entries(student).forEach((entry) => {
 //   console.log(` ${entry[0]} ===> ${entry[1]} `);
 // });
 
-// creación de objetos con función constructora
-// son funciones diseñanas para construir un nuevo objecto.
-// donde this se refiere a un objecto recien creado
+// Creating objects with a constructor function
+// 'this' reference the object just created
 // function Cellphone(brand, version, so) {
 //   this.brand = brand;
 //   this.version = version;
