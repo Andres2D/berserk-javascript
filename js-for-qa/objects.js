@@ -115,7 +115,7 @@
 // console.log(redmi.brand);
 // redmi.displayVersion();
 
-// Tarea
+// Ejercicio
 // | key             | value                 | type    |
 // | --------------- | --------------------- | ------- |
 // | id              | 45223                 | number  |
