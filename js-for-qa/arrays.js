@@ -20,7 +20,9 @@ let programmingLanguages = ['C++', 'Java', 'Javascript', 'C#', 'PHP'];
 
 // Getting data
 // Get from position
+// Arrays are collections with key and value, the key is the position and the value is te value in the position
 // console.log(programmingLanguages[0]);
+
 
 // Getting the last item error
 // console.log(programmingLanguages[6]);
