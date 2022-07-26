@@ -80,3 +80,9 @@ let obj = {
 
 // const studentName = student.getName;
 // console.log(studentName());
+
+// Scope of functions
+if(true) {
+  function mainAction() { console.log('Action') }
+  mainAction();
+}

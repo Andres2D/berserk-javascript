@@ -22,7 +22,7 @@ const user = {
 Object.preventExtensions(user);
 
 user.role = 'Admin';
-console.log(user);
+// console.log(user);
 
 // Other example
 let obj = {
@@ -96,8 +96,13 @@ const student = {
   }  
 }
 
-console.log(student.getName());
+// console.log(student.getName());
 
 const studentName = student.getName;
-console.log(studentName());
+// console.log(studentName());
 
+// Scope of functions
+if(true) {
+  function mainAction() { console.log('Action') }
+  mainAction();
+}
