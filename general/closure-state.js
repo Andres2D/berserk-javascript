@@ -7,7 +7,7 @@ function useState(initialValue) {
     function getValue(){ return _value},
     function setState(newValue) {_value = newValue},
   ]
-}
+};
 
 // using the closure
 const [ score, setScore ] = useState(0);

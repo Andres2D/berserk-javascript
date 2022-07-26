@@ -50,9 +50,12 @@ function sum(a, b, a) {
 
 // Arrow functions can never have duplicate named parameters, whether in strict or non-strict mode.
 //https://blog.logrocket.com/anomalies-in-javascript-arrow-functions/
-// const sumTwo = (a, b, a) => {
+// const sumTwo = (a, b) => {
+//   customVar = 0;
 //   return a+b;
 // };
+
+// console.log(sumTwo(8, 8));
  
 // Using with
 // It is impossible to know if reference is for car or if is form the let var

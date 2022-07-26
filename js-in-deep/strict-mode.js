@@ -80,4 +80,3 @@ let obj = {
 
 // const studentName = student.getName;
 // console.log(studentName());
-
