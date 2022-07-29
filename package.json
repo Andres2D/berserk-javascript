@@ -4,7 +4,7 @@
   "description": "Basic and Complex implementation of javascript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "Andres2D",
   "license": "ISC",
