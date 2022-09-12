@@ -103,10 +103,57 @@ const getPartyAccess = (person) => {
 const verification = getPartyAccess({ name: 'Andres', hasMoney: () => { return false } });
 console.log(verification);
 
-
 /**
  * 4] Use more destructuring
  */
+
+// Please don't
+const client = {
+  name: 'Andres',
+  budget: 1000,
+  references: ['Nicolas', 'Ellen']
+}
+
+const verifyCreditBad = (client) => {
+  if(client.budget > 500 && client.references.length === 2) {
+    return {
+      name: client.name,
+      approved: true,
+      mainContact: client.references[0],
+      optionalContact: client.references[1]
+    }
+  } else {
+    return {
+      approved: false
+    }
+  }
+};
+
+console.log(verifyCreditBad(client));
+
+// Do instead
+const verifyCredit = (client) => {
+
+  const { budget, references, name } = client;
+  const [ mainReference, optionalReference ] = references;
+
+  if(budget > 500 && references.length === 2) {
+    return {
+      name,
+      approved: true,
+      mainContact: mainReference,
+      optionalContact: optionalReference
+    }
+  } else {
+    return {
+      approved: false
+    }
+  }
+};
+
+console.log(verifyCredit(client));
+
+
 
 /**
  * 5] An alternative to the switch case clauses 
