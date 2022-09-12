@@ -153,8 +153,73 @@ const verifyCredit = (client) => {
 
 console.log(verifyCredit(client));
 
-
-
 /**
  * 5] An alternative to the switch case clauses 
  */
+
+// One option
+const executeAction = (action) => {
+  switch(action) {
+    case 'create':
+      return {
+        created: true,
+        message: 'Item created successfully'
+      };
+    case 'delete': {
+      return {
+        deleted: true,
+        message: 'Item deleted successfully'
+      }
+    }
+    case 'update': {
+      return {
+        updated: true,
+        message: 'Item updated successfully'
+      }
+    }
+    default: {
+      return {
+        error: true,
+        message: 'Invalid action'
+      };
+    }
+  }
+};
+
+console.log(executeAction('sd'));
+
+// Second option
+
+const actionMap = {
+  create: () => {
+    return {
+      created: true,
+      message: 'Item created successfully'
+    }
+  },
+  delete: () => {
+    return {
+      deleted: true,
+      message: 'Item deleted successfully'
+    }
+  },
+  update: () => {
+    return {
+      updated: true,
+      message: 'Item updated successfully'
+    }
+  }
+}
+
+const executeActionMap = (action) => {
+  if(!Object.keys(actionMap).includes(action)) {
+    return {
+      error: true,
+      message: 'Invalid action'
+    };
+  }
+
+  return actionMap[action]();
+}
+
+console.log(executeActionMap('sa'));
