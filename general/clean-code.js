@@ -68,6 +68,41 @@ const findBook = (bookId) => {
  * 3] Don't repeat yourself, if clauses 
  */
 
+// Please don't
+
+const invitationList = ['Kevin', 'Sara', 'Steve', 'Karen'];
+const capacity = 10;
+
+const getPartyAccessBad = (person) => {
+  if(invitationList.length < capacity && invitationList.includes(person.name)) {
+    return 'Access granted';
+  }
+
+  if(invitationList.length < capacity && person.hasMoney()) {
+    return 'Access granted';
+  }
+
+  return 'Access denied';
+};
+
+const verificationBad = getPartyAccessBad({ name: 'Andres', hasMoney: () => { return false } });
+console.log(verificationBad);
+
+// Do instead
+
+const getPartyAccess = (person) => {
+  if(invitationList.length < capacity) {
+    if(invitationList.includes(person.name) || person.hasMoney()) {
+      return 'Access granted';
+    }
+  }
+
+  return 'Access denied';
+};
+
+const verification = getPartyAccess({ name: 'Andres', hasMoney: () => { return false } });
+console.log(verification);
+
 
 /**
  * 4] Use more destructuring
