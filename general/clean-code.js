@@ -13,7 +13,7 @@ const resOfc = (u) => { if(ofcSts.ena) { ofcSts = { ena: false, resBy: u } } els
 resOfc('Mike');
 console.log(ofcSts);
 
-// Instead
+// Do instead
 let officeStatus = { 
   enabled: true, 
   reservedByUser: '' 
@@ -36,6 +36,32 @@ console.log(officeStatus);
 /**
  * 2] Simplify return cases
  */
+
+// Please don't
+const findBookBad = (bookId) => {
+  if(bookId !== undefined || bookId !== null) {
+    const book = {
+      id: bookId,
+      name: 'Book title'
+    };
+    return book;
+  } else {
+    return null;
+  }
+};
+
+// Do instead
+const findBook = (bookId) => {
+  if(!book) {
+    return null;
+  }
+
+  const book = {
+    id: bookId,
+    name: 'Book title'
+  };
+  return book;
+};
 
 
 /**
