@@ -91,10 +91,9 @@ console.log(verificationBad);
 // Do instead
 
 const getPartyAccess = (person) => {
-  if(invitationList.length < capacity) {
-    if(invitationList.includes(person.name) || person.hasMoney()) {
-      return 'Access granted';
-    }
+  if(invitationList.length < capacity 
+    || (invitationList.includes(person.name) || person.hasMoney())) {
+    return 'Access granted';
   }
 
   return 'Access denied';
@@ -222,4 +221,4 @@ const executeActionMap = (action) => {
   return actionMap[action]();
 }
 
-console.log(executeActionMap('sa'));
+console.log(executeActionMap('create'));
