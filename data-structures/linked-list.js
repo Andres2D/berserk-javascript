@@ -147,7 +147,7 @@ class SinglyLinkedList {
     }
 
     if(index === 0) {
-      return this.shift;
+      return this.shift();
     }
 
     if(index === this.length - 1) {
@@ -177,6 +177,15 @@ class SinglyLinkedList {
     }
 
     return this;
+  }
+
+  // Traverse
+  traverse() {
+    let current = this.head;
+    while(current) {
+      console.log(current.data);
+      current = current.next;
+    }
   }
 }
 
@@ -216,3 +225,5 @@ console.log(singlyLinkedList);
 singlyLinkedList.reverse();
 console.log(singlyLinkedList);
 console.log(singlyLinkedList.get(2));
+
+singlyLinkedList.traverse();
