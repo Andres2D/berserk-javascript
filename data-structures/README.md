@@ -29,7 +29,14 @@ The last node will have a reference with a null value, indicating the end of the
 #### Transversal
 Is like a map in array, it visits every node in the list and perform some operation in the data.
 
+#### Doubly linked lists
+Are more efficient than singly linked list due to the traversal in both directions. However, its logic is more complex and it requires manage previous and next references.
 
+> Applications of doubly linked lists:
+> Implementation of undo and redo for text editors.
+> cache
+> browser history management
+> Music playlists and navigation feature
 
 
 
