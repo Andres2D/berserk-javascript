@@ -53,4 +53,19 @@ Is like stacks, but the order is FIFO (First in First out). The items are insert
 ## Binary tree
 Is a non linear data structure, where each node has at most two children referred as left child and the right child.
 
+Binary trees provides clear hierarchy, so the data is easy to understand.
+Also, recursive algorithms are a perfect fit for trees. And is efficient for handling large datasets in dynamic scenarios.
 
+Applications of binary trees:
+* DOM in HTML
+* File explorer
+* Routing Algorithms
+
+However, binary trees represents a complexity to keep the tree balanced.
+Binary trees nodes can only have 2 children, which is limited for more complex structures.
+
+## Binary search tree
+Binary search trees are like regular binary tree with the following rules.
+* The left node always is less than the root node
+* The right node is always greater than the root node
+* Theres no duplicated keys in the tree.
