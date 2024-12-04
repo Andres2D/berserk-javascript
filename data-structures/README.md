@@ -46,3 +46,6 @@ Real world applications:
 * Managing functions: js uses stack to keep track of functions. When a function is called, it goes on the stack. When is done, to comes off. (Event loop)
 * Undo buttons: like in a text editor
 * Solving puzzles
+
+### Queue
+Is like stacks, but the order is FIFO (First in First out). The items are inserted at one end and deleted from the other end.
