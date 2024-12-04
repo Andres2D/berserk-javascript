@@ -49,3 +49,8 @@ Real world applications:
 
 ### Queue
 Is like stacks, but the order is FIFO (First in First out). The items are inserted at one end and deleted from the other end.
+
+## Binary tree
+Is a non linear data structure, where each node has at most two children referred as left child and the right child.
+
+
