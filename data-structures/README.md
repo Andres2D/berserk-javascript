@@ -38,5 +38,11 @@ Are more efficient than singly linked list due to the traversal in both directio
 > browser history management
 > Music playlists and navigation feature
 
+## Stack
+Is a linear data structure that follows two orders LIFO(Last in first out)
+or FILO(First in last out), also, all insertions and deletions are permitted at only one end of the stack.
 
-
+Real world applications:
+* Managing functions: js uses stack to keep track of functions. When a function is called, it goes on the stack. When is done, to comes off. (Event loop)
+* Undo buttons: like in a text editor
+* Solving puzzles
