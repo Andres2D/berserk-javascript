@@ -69,3 +69,17 @@ Binary search trees are like regular binary tree with the following rules.
 * The left node always is less than the root node
 * The right node is always greater than the root node
 * Theres no duplicated keys in the tree.
+
+## Heap
+A heap is a complete binary tree (all levels of the tree are filled completely, except the lowest level nodes which are filled from as left as possible) in which for every node, the value of its children is greater than or equal to its own value.
+
+Heap uses array as a data base, however, the search, insertions and deletions complexity are low due to the fact that is easy to predict the indexes of the data we need. (we do not need to go trough the whole array fro that)
+
+### Max Heap:
+The root must be greater or equal than all his children
+
+### Min Heap:
+The root must be less or equal than all his children
+
+Applications: 
+* Priority queues
