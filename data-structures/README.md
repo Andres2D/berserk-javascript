@@ -83,3 +83,16 @@ The root must be less or equal than all his children
 
 Applications: 
 * Priority queues
+
+
+### Hashing
+Hashing is way to store values in an array, defining the index to insert the value with a mathematical formula based on the actual value and the dimensions of the array.
+This technique ensures a way to calculate very fast where is the value stored in the array. and making it easier to find, insert or delete.
+
+Hashing has a problem and is the collisions, in which two different values can result in the same index to insert. However, there are techniques to solve these collision problems in a clever way.
+
+- Hash applications:
+  * databases for indexing data
+  * In javascript to implement objects
+
+However, hashing can be inefficient if the data causes a lot of collisions. And Hash does not allow null values.
