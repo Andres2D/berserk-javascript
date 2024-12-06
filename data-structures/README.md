@@ -96,3 +96,30 @@ Hashing has a problem and is the collisions, in which two different values can r
   * In javascript to implement objects
 
 However, hashing can be inefficient if the data causes a lot of collisions. And Hash does not allow null values.
+
+### Graphs
+Is a non linear data structure with vertices and edges.
+
+- Applications
+  * Social networks
+  * Recommendation systems
+  * Computer networks
+
+Types of graphs:
+* Null: no edges connecting the nodes
+* Trivial: One single node
+* Undirected: The edges connecting the nodes doesn't have any direction.
+* Directed: The edges has a connection direction
+* Connected: All the nodes can be visited from any other node
+* Disconnected: At least one node is not reachable from a node
+* Regular: The degree of every vertex is equal to K
+* Complete: Each node has an edge to each other node.
+* Cycle: the edges from a cycle
+* Cyclic: Contains at least one cycle
+
+In Javascript, graphs can be created in matrices or adjacent lists.
+Matrices ara good for search but it takes more space for empty nodes.
+Lists takes less space but are slower than matrices for search.
+
+
+
