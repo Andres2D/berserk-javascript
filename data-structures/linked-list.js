@@ -227,3 +227,23 @@ console.log(singlyLinkedList);
 console.log(singlyLinkedList.get(2));
 
 singlyLinkedList.traverse();
+
+
+
+//  MEMORIZE
+
+function reverseList(head: ListNode | null): ListNode | null {
+  let node = head;
+  let previous = null;
+  
+  while(node) {
+      const aux = node.next;
+      node.next = previous;
+      previous = node;
+      node = aux;
+  }
+  
+  return previous;
+  
+};
+
